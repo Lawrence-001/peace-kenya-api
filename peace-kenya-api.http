@@ -1,0 +1,6 @@
+@peace_kenya_api_HostAddress = http://localhost:5174
+
+GET {{peace_kenya_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
