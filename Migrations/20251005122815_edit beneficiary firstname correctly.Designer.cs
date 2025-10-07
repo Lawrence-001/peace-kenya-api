@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using peace_kenya_api.Data;
@@ -12,9 +13,11 @@ using peace_kenya_api.Data;
 namespace peace_kenya_api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251005122815_edit beneficiary firstname correctly")]
+    partial class editbeneficiaryfirstnamecorrectly
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -337,13 +340,11 @@ namespace peace_kenya_api.Migrations
 
                     b.HasIndex("IdNumber")
                         .IsUnique()
-                        .HasDatabaseName("ix_beneficiaries_id_number")
-                        .HasFilter("\"id_number\" IS NOT NULL");
+                        .HasDatabaseName("ix_beneficiaries_id_number");
 
                     b.HasIndex("PassportNumber")
                         .IsUnique()
-                        .HasDatabaseName("ix_beneficiaries_passport_number")
-                        .HasFilter("\"passport_number\" IS NOT NULL");
+                        .HasDatabaseName("ix_beneficiaries_passport_number");
 
                     b.ToTable("beneficiaries", (string)null);
                 });

@@ -7,7 +7,7 @@ namespace peace_kenya_api.Models
     {
         [Key]
         public long BeneficiaryId { get; set; }
-        public string FisrtName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? MiddleName { get; set; }
         public int? IdNumber { get; set; }

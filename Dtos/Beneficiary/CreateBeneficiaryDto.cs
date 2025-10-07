@@ -7,7 +7,7 @@ namespace peace_kenya_api.Dtos.Beneficiary
     {
         [Required(ErrorMessage ="First Name is required")]
         [Display(Name = "First Name")]
-        public string FisrtName { get; set; }
+        public string FirstName { get; set; }
 
         [Required(ErrorMessage ="Last Name is required")]
         [Display(Name = "Last Name")]

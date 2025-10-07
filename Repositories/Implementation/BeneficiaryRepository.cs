@@ -80,11 +80,19 @@ namespace peace_kenya_api.Repositories.Implementation
 
         public async Task<bool> IdExists(int? id)
         {
+            if (id == null)
+            {
+                return false;
+            }
             return await _context.Beneficiaries.AnyAsync(x => x.IdNumber == id);
         }
 
         public async Task<bool> PassportNumberExists(string? passportNumber)
         {
+            if (passportNumber == null)
+            {
+                return false;
+            }
             return await _context.Beneficiaries.AnyAsync(x => x.PassportNumber == passportNumber);
         }
     }
