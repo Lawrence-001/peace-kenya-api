@@ -1,9 +1,10 @@
-﻿using peace_kenya_api.Enums;
+﻿using peace_kenya_api.BaseEntities;
+using peace_kenya_api.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace peace_kenya_api.Models
 {
-    public class Beneficiary
+    public class Beneficiary : BaseEntity
     {
         [Key]
         public long BeneficiaryId { get; set; }

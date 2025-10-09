@@ -37,7 +37,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;
-    //options.SignIn.RequireConfirmedEmail = true;
+    options.SignIn.RequireConfirmedEmail = true;
 }).AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
@@ -48,9 +48,13 @@ builder.Services.AddScoped<IContactUsRepository, ContactUsRepository>();
 builder.Services.AddScoped<IContactUsService, ContactUsService>();
 builder.Services.AddScoped<IBeneficiaryRepository, BeneficiaryRepository>();
 builder.Services.AddScoped<IBeneficiaryService, BeneficiaryService>();
+builder.Services.AddScoped<IDonationRepository, DonationRepository>();
+builder.Services.AddScoped<IDonationService, DonationService>();
+builder.Services.AddScoped<IMpesaService, MpesaService>();
 
 builder.Services.AddAutoMapper(x => x.AddProfile<ContactUsProfile>());
 builder.Services.AddAutoMapper(x => x.AddProfile<BeneficiaryProfile>());
+builder.Services.AddAutoMapper(x => x.AddProfile<DonationProfile>());
 
 
 builder.Services.AddControllers();

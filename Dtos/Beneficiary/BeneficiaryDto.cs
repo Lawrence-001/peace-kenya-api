@@ -1,5 +1,4 @@
 ﻿using peace_kenya_api.Enums;
-using System.ComponentModel.DataAnnotations;
 
 namespace peace_kenya_api.Dtos.Beneficiary
 {

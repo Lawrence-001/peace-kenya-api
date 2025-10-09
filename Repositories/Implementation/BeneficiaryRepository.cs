@@ -28,7 +28,7 @@ namespace peace_kenya_api.Repositories.Implementation
             {
                 return false;
             }
-            _context.Beneficiaries.Remove(beneficiary);
+            beneficiary.IsDeleted = true;
             await _context.SaveChangesAsync();
             return true;
         }
@@ -56,7 +56,7 @@ namespace peace_kenya_api.Repositories.Implementation
             //    return null;
             //}
 
-            //recordToUpdate.FisrtName = beneficiary.FisrtName;
+            //recordToUpdate.FirstName = beneficiary.FirstName;
             //recordToUpdate.LastName = beneficiary.LastName;
             //recordToUpdate.MiddleName = beneficiary.MiddleName;
             //recordToUpdate.IdNumber = beneficiary.IdNumber;

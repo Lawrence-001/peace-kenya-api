@@ -16,7 +16,8 @@ namespace peace_kenya_api.Repositories.Implementation
                 { "Gender", EnumHelper.ToDtoList<Gender>() },
                 { "Location", EnumHelper.ToDtoList<Location>() },
                 { "Programs", EnumHelper.ToDtoList<Programs>() },
-                { "Skills", EnumHelper.ToDtoList<Skills>() }
+                { "Skills", EnumHelper.ToDtoList<Skills>() },
+                {"PaymentMethod", EnumHelper.ToDtoList<PaymentMethod>() }
             };
         }
 

@@ -155,7 +155,7 @@ namespace peace_kenya_api.Services.Implementation
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error updating beneficiary {BeneficiaryId} {@Beneficiary}", id, dto);
+                _logger.LogError(ex, "Error updating beneficiary {BeneficiaryId}", id);
                 return Result<BeneficiaryDto>.Failure("An error occurred while updating beneficiary");
             }
         }

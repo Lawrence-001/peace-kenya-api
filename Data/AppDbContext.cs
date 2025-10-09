@@ -29,6 +29,7 @@ namespace peace_kenya_api.Data
 
             builder.ApplyConfiguration(new ContactUsConfig());
             builder.ApplyConfiguration(new BeneficiaryConfig());
+            builder.ApplyConfiguration(new DonationConfig());
 
 
             //convert table names to lowercase
